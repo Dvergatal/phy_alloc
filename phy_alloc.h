@@ -18,9 +18,14 @@
 #ifndef _PHY_ALLOC_H_
 #define _PHY_ALLOC_H_
 
+#ifdef __FreeBSD__
+#include <sys/ioccom.h>
+#include <sys/stdint.h>
+#endif
+
 #ifdef OS_LINUX
 #include <stdint.h>
-#else
+#elif !defined(__FreeBSD__)
 #include <linux/types.h>
 #endif
 
@@ -67,15 +72,14 @@ enum {
 #pragma pack()
 
 // ioctl
-// #define IOCTL_CLEAR_MEMORY                  _IO(DEVICE_MAJOR_NUM, 0)
-#define IOCTL_ALLOCATE_MEMORY                _IO(DEVICE_MAJOR_NUM, 1)
-#define IOCTL_FREE_MEMORY                    _IO(DEVICE_MAJOR_NUM, 2)
-#define IOCTL_WRITE_MEMORY                   _IO(DEVICE_MAJOR_NUM, 3)
-#define IOCTL_READ_MEMORY                    _IO(DEVICE_MAJOR_NUM, 4)
-#define IOCTL_READ_VERSION                   _IO(DEVICE_MAJOR_NUM, 5)
-#define IOCTL_GET_ALLOCATED_QUENTITY         _IO(DEVICE_MAJOR_NUM, 6)
-#define IOCTL_SMI                            _IO(DEVICE_MAJOR_NUM, 7)
-#define IOCTL_IO                             _IO(DEVICE_MAJOR_NUM, 8)
+#define IOCTL_ALLOCATE_MEMORY                _IOWR(DEVICE_MAJOR_NUM, 1, ST_PHY_ALLOC)
+#define IOCTL_FREE_MEMORY                    _IOWR(DEVICE_MAJOR_NUM, 2, ST_PHY_ALLOC)
+#define IOCTL_WRITE_MEMORY                   _IOWR(DEVICE_MAJOR_NUM, 3, ST_PHY_ALLOC)
+#define IOCTL_READ_MEMORY                    _IOWR(DEVICE_MAJOR_NUM, 4, ST_PHY_ALLOC)
+#define IOCTL_READ_VERSION                   _IOR(DEVICE_MAJOR_NUM, 5, unsigned int)
+#define IOCTL_GET_ALLOCATED_QUENTITY         _IOR(DEVICE_MAJOR_NUM, 6, unsigned int)
+#define IOCTL_SMI                            _IOWR(DEVICE_MAJOR_NUM, 7, SMI_REGISTER)
+#define IOCTL_IO                             _IOWR(DEVICE_MAJOR_NUM, 8, DRV_IO)
 
 // return
 #define DRV_SUCCESS 0
@@ -87,6 +91,6 @@ enum {
 #define ARGUMENT_FAIL -6
 #define DRV_FAILED -7
 
-#define VERSION_NUMBER_HEX  0x00000008
+#define VERSION_NUMBER_HEX  0x00000009
 
 #endif 
