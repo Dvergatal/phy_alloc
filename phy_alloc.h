@@ -80,6 +80,7 @@ enum {
 #define IOCTL_GET_ALLOCATED_QUENTITY         _IOR(DEVICE_MAJOR_NUM, 6, unsigned int)
 #define IOCTL_SMI                            _IOWR(DEVICE_MAJOR_NUM, 7, SMI_REGISTER)
 #define IOCTL_IO                             _IOWR(DEVICE_MAJOR_NUM, 8, DRV_IO)
+#define IOCTL_TEST                           _IOWR(DEVICE_MAJOR_NUM, 9, ST_PHY_ALLOC)
 
 // return
 #define DRV_SUCCESS 0

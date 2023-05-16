@@ -39,7 +39,6 @@ ST_OBJ *gpObjList = NULL;
 
 #pragma pack()
 
-
 //
 // Allocate physical memory
 //
@@ -350,15 +349,7 @@ static int DoIO (unsigned int* ptr)
   return status;
 }
 
-static int SMI (unsigned char* arg)
-{
-	SMI_REGISTER SmiReg = {0};
-	SMI_REGISTER* reg = &SmiReg;
-
-	if (getargs (reg, arg, sizeof (SMI_REGISTER))) {
-		return 1;
-	}
-
+static void TriggerSmi(SMI_REGISTER* reg) {
 	KDBG ("EAX: 0x%x\n", reg->dwEAX);
 	KDBG ("EBX: 0x%x\n", reg->dwEBX);
 	KDBG ("ECX: 0x%x\n", reg->dwECX);
@@ -427,7 +418,7 @@ static int SMI (unsigned char* arg)
 #endif
 	);
 
-    DrvSleep(500);
+    // DrvSleep(500);
 
 	reg->dwEAX = t_dwEAX;
 	reg->dwEBX = t_dwEBX;
@@ -435,6 +426,18 @@ static int SMI (unsigned char* arg)
 	reg->dwEDX = t_dwEDX;
 	reg->dwESI = t_dwESI;
 	reg->dwEDI = t_dwEDI;
+}
+
+static int SMI (unsigned char* arg)
+{
+	SMI_REGISTER SmiReg = {0};
+	SMI_REGISTER* reg = &SmiReg;
+
+	if (getargs (reg, arg, sizeof (SMI_REGISTER))) {
+		return 1;
+	}
+
+	TriggerSmi(reg);
 
 	if (setargs (arg, reg, sizeof (SMI_REGISTER))) {
 		KDBG (KERN_WARNING "Copy Data back to user failed\n");
@@ -483,6 +486,9 @@ static inline int DrvIoctl(unsigned int cmd, unsigned long arg)
 
     case IOCTL_READ_VERSION:
       Ret = Version ( (unsigned int *) arg);
+      break;
+
+    case IOCTL_TEST:
       break;
 
     default:
