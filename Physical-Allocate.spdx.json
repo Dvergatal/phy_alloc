@@ -1,0 +1,189 @@
+{
+    "spdxVersion": "SPDX-2.3",
+    "documentNamespace": "https://spdx.org/spdxdocs/Physical-Allocate-12b14b10-34ef-4394-acce-17e186d80e05",
+    "creationInfo": {
+        "creators": [
+            "Organization: Insyde Software Corp (h2oide.support@insyde.com)",
+            "Tool: spdx-cli_1.2.0.exe"
+        ],
+        "created": "2024-08-20T10:44:50Z",
+        "licenseListVersion": "3.20"
+    },
+    "dataLicense": "CC0-1.0",
+    "SPDXID": "SPDXRef-DOCUMENT",
+    "name": "Physical-Allocate",
+    "packages": [
+        {
+            "SPDXID": "SPDXRef-Package-Physical-Allocate-79aa6d45b4395129b4cdd8ef401f299098e9c492",
+            "name": "Physical-Allocate",
+            "downloadLocation": "git+https://github.com/insyde-ct1/phy_alloc",
+            "packageVerificationCode": {
+                "packageVerificationCodeValue": "2a57d75456a705725b2eb3ddea27f18c93641540",
+                "packageVerificationCodeExcludedFiles": [
+                    "./.git/",
+                    "./Physical-Allocate.spdx.json",
+                    "./Src.spdxconfig.json"
+                ]
+            },
+            "licenseConcluded": "(GPL-3.0-or-later AND LicenseRef-Insyde)",
+            "copyrightText": "Copyright (c) 2018 - 2024, Insyde Software Corporation. All Rights Reserved.\n\nYou may not reproduce, distribute, publish, display, perform, modify, adapt,\ntransmit, broadcast, present, recite, release, license or otherwise exploit\nany part of this publication in any form, by any means, without the prior\nwritten permission of Insyde Software Corporation.",
+            "packageFileName": ".",
+            "supplier": "Organization: Insyde Software Corp. (h2oide.support@insyde.com)",
+            "hasFiles": [
+                "SPDXRef-affc80db4761fd0cd6db178783b7da5014db7edf",
+                "SPDXRef-cbc86f9239daea5c9c884350706ed955e6c658b3",
+                "SPDXRef-daf83b5f7a0686df000652f5d1ed319d17b942eb",
+                "SPDXRef-71432b44b5eefa389e8357bad5dace6233196a2a",
+                "SPDXRef-3ee9d3859e2f57efea25977c6c87b4f4d67f3a02",
+                "SPDXRef-46ac06357550bed1bfa3e312137322029aa10bed",
+                "SPDXRef-d10e46d8e95b1dcf9c0f92088e0aa10982cabfc5",
+                "SPDXRef-4254d49114abeeea0320ba657af96b73a970ba06",
+                "SPDXRef-0a2c905124bd78189a1f2c6bfa52ddf3d4ed17dc"
+            ]
+        }
+    ],
+    "files": [
+        {
+            "fileName": "./bsd/drv.h",
+            "SPDXID": "SPDXRef-affc80db4761fd0cd6db178783b7da5014db7edf",
+            "checksums": [
+                {
+                    "algorithm": "SHA1",
+                    "checksumValue": "2d5f4d965ba6c0e5ed4533ed8f5982dde2e89c4c"
+                }
+            ],
+            "licenseConcluded": "(GPL-3.0-or-later AND LicenseRef-Insyde)",
+            "fileTypes": [
+                "SOURCE"
+            ]
+        },
+        {
+            "fileName": "./bsd/Makefile",
+            "SPDXID": "SPDXRef-cbc86f9239daea5c9c884350706ed955e6c658b3",
+            "checksums": [
+                {
+                    "algorithm": "SHA1",
+                    "checksumValue": "2b66fb9066c399a6f9d06c6896c92da5fd68f4e3"
+                }
+            ],
+            "licenseConcluded": "(GPL-3.0-or-later AND LicenseRef-Insyde)",
+            "fileTypes": [
+                "SOURCE"
+            ]
+        },
+        {
+            "fileName": "./LICENSE",
+            "SPDXID": "SPDXRef-daf83b5f7a0686df000652f5d1ed319d17b942eb",
+            "checksums": [
+                {
+                    "algorithm": "SHA1",
+                    "checksumValue": "1eba7caf09a39110ad2f542e3ed8700d1a69c6d3"
+                }
+            ],
+            "licenseConcluded": "(GPL-3.0-or-later AND LicenseRef-Insyde)",
+            "copyrightText": "Copyright (C) 2007 Free Software Foundation, Inc. <https://fsf.org/>",
+            "fileTypes": [
+                "SOURCE"
+            ]
+        },
+        {
+            "fileName": "./linux/drv.h",
+            "SPDXID": "SPDXRef-71432b44b5eefa389e8357bad5dace6233196a2a",
+            "checksums": [
+                {
+                    "algorithm": "SHA1",
+                    "checksumValue": "c283fa598541086dd2f4045ad62d096f0d075d59"
+                }
+            ],
+            "licenseConcluded": "(GPL-3.0-or-later AND LicenseRef-Insyde)",
+            "fileTypes": [
+                "SOURCE"
+            ]
+        },
+        {
+            "fileName": "./Makefile",
+            "SPDXID": "SPDXRef-3ee9d3859e2f57efea25977c6c87b4f4d67f3a02",
+            "checksums": [
+                {
+                    "algorithm": "SHA1",
+                    "checksumValue": "6ccc5c82cd6bdbc5f140dfd784f9e4ea7a3980c6"
+                }
+            ],
+            "licenseConcluded": "(GPL-3.0-or-later AND LicenseRef-Insyde)",
+            "fileTypes": [
+                "SOURCE"
+            ]
+        },
+        {
+            "fileName": "./phy_alloc.c",
+            "SPDXID": "SPDXRef-46ac06357550bed1bfa3e312137322029aa10bed",
+            "checksums": [
+                {
+                    "algorithm": "SHA1",
+                    "checksumValue": "5a303dd7b4dbb9f68cd8454098b57620c8235ac7"
+                }
+            ],
+            "licenseConcluded": "(GPL-3.0-or-later AND LicenseRef-Insyde)",
+            "copyrightText": "Copyright (C) 2013 - 2015 Insyde Software Corp.",
+            "fileTypes": [
+                "SOURCE"
+            ]
+        },
+        {
+            "fileName": "./phy_alloc.h",
+            "SPDXID": "SPDXRef-d10e46d8e95b1dcf9c0f92088e0aa10982cabfc5",
+            "checksums": [
+                {
+                    "algorithm": "SHA1",
+                    "checksumValue": "b52a32d5cff01d05909638ffd44080a6f9719cb4"
+                }
+            ],
+            "licenseConcluded": "(GPL-3.0-or-later AND LicenseRef-Insyde)",
+            "copyrightText": "Copyright (C) 2013 - 2020 Insyde Software Corp.",
+            "fileTypes": [
+                "SOURCE"
+            ]
+        },
+        {
+            "fileName": "./README.md",
+            "SPDXID": "SPDXRef-4254d49114abeeea0320ba657af96b73a970ba06",
+            "checksums": [
+                {
+                    "algorithm": "SHA1",
+                    "checksumValue": "fdd15c407e6718e8677f6e1b52d4aab52cc3f33c"
+                }
+            ],
+            "licenseConcluded": "(GPL-3.0-or-later AND LicenseRef-Insyde)",
+            "fileTypes": [
+                "SOURCE"
+            ]
+        },
+        {
+            "fileName": "./test.c",
+            "SPDXID": "SPDXRef-0a2c905124bd78189a1f2c6bfa52ddf3d4ed17dc",
+            "checksums": [
+                {
+                    "algorithm": "SHA1",
+                    "checksumValue": "c1d16d1e49cc94d9bffbc3f79d79974b4d2d4eff"
+                }
+            ],
+            "licenseConcluded": "(GPL-3.0-or-later AND LicenseRef-Insyde)",
+            "fileTypes": [
+                "SOURCE"
+            ]
+        }
+    ],
+    "hasExtractedLicensingInfos": [
+        {
+            "licenseId": "LicenseRef-Insyde",
+            "extractedText": "Copyright (c) 2018 - 2024, Insyde Software Corporation. All Rights Reserved.\n\nYou may not reproduce, distribute, publish, display, perform, modify, adapt,\ntransmit, broadcast, present, recite, release, license or otherwise exploit\nany part of this publication in any form, by any means, without the prior\nwritten permission of Insyde Software Corporation.",
+            "name": "LicenseRef-Insyde",
+            "seeAlsos": [
+                "https://www.insyde.com/"
+            ]
+        }
+    ],
+    "documentDescribes": [
+        "SPDXRef-Package-Physical-Allocate-79aa6d45b4395129b4cdd8ef401f299098e9c492"
+    ]
+}
